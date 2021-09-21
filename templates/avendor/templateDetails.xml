@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.7//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.7/template-install.dtd">
+<extension
+	version="3.3"
+	type="template"
+	client="site"
+	method="upgrade">
+	<name>Avendor</name>
+	<creationDate>2015/01</creationDate>
+	<author>WS-Theme / 4GraFx</author>
+	<authorEmail>info@ws-theme.com</authorEmail>
+	<authorUrl>http://www.ws-theme.com</authorUrl>
+	<copyright>Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.</copyright>
+	<license>GNU General Public License version 3 or later</license>
+	<version>1.0</version>
+	<description>Avendor - Responsive Joomla Template</description>
+	
+	<files>
+		<filename>index.php</filename>
+		<filename>index.html</filename>
+		<filename>favicon.ico</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<filename>error.php</filename>
+		<filename>offline.php</filename>
+		<filename>component.php</filename>
+		<folder>admin</folder>
+		<folder>html</folder>
+		<folder>css</folder>
+		<folder>fonts</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>roksprocket</folder>
+	</files>
+
+	<positions>
+
+		<position>preloader</position>
+		<position>switcher</position>
+			
+		<position>toolbar-left</position>
+		<position>toolbar-right</position>
+
+		<position>menu</position>
+		<position>slideshow</position>
+		<position>sitetitle</position>
+		<position>breadcrumbs</position>
+
+		<position>content-top</position>
+		<position>sidebar-left</position>
+		<position>sidebar-right</position>
+		<position>content-bottom</position>		
+		
+		<position>footer-map</position>
+		<position>footer-menu</position>
+		<position>footer-social</position>
+		
+		<position>reveal1</position>
+		<position>reveal2</position>
+		<position>reveal3</position>
+		<position>reveal4</position>
+		<position>reveal5</position>
+		
+	</positions>
+	
+	<config>
+		<fields name="params">
+			
+			<!-- GENERAL *************************************************************************************************************************************************************************************************************************** -->
+			
+			<fieldset name="basic1" label="General" addfieldpath="templates/avendor/admin/elements">
+
+				<field name="headline1" type="wsheadline" label="&lt;i class='fa fa-cog'&gt;&lt;/i&gt;Color Settings" />
+					
+					<field
+						name="c1"
+						type="color"
+						default="#20A5E8"
+						label="Color Main"
+						position="bottom"
+						description="Please choose the Primary Color Theme of the Template, this color is called color-primary"
+					/>
+					
+					<field
+						name="c2"
+						type="color"
+						default="#1188cc"
+						label="Color Hover"
+						position="bottom"
+						description="Please choose the Hover Color Theme of the Template"
+					/>
+					
+					<field
+					name="boxed"
+					type="radio"
+					class="btn-group"
+					default="wide"
+					label="Layout"
+					description="Please choose the Layout for the Template, this is an very important option!"
+				>
+						<option value="wide">Wide</option>
+						<option value="boxed">Boxed</option>
+				</field>
+					
+				<field
+					name="color_scheme"
+					type="radio"
+					class="btn-group"
+					default="light"
+					label="Color Scheme"
+					description="Choose the Color Scheme for the whole Template"
+				>
+						<option value="light">Light</option>
+						<option value="dark">Dark</option>
+				</field>	
+				
+				<field name="bgimage_headline" type="wsheadline" label="&lt;i class='fa fa-cog'&gt;&lt;/i&gt;Background Settings (for boxed Version only)" showon="boxed:boxed" />	
+
+					<field
+   				name="bgimage"
+   				type="list"
+   				default="bg11"
+   				label="Background Image"
+   				class="bgimage"
+   				description="Please choose the Main Background Image for the Boxed Version only!!!"
+   				showon="boxed:boxed"
+   			>
+     				<option value="bg-pattern1">Background 01</option>
+     				<option value="bg-pattern2">Background 02</option>
+     				<option value="bg-pattern3">Background 03</option>
+     				<option value="bg-pattern4">Background 04</option>
+     				<option value="bg-pattern5">Background 05</option>
+     				<option value="bg-pattern6">Background 06</option>
+     				<option value="bg-pattern7">Background 07</option>
+     				<option value="bg-pattern8">Background 08</option>
+     				<option value="bg-pattern9">Background 09</option>
+     				<option value="bg-pattern10">Background 10</option>
+     				<option value="bg-pattern11">Background 11</option>
+     				<option value="bg-pattern12">Background 12</option>
+     				<option value="bg-pattern13">Background 13</option>
+     				<option value="bg-pattern14">Background 14</option>
+     				<option value="bg-pattern15">Background 15</option>
+     				<option value="bg-pattern16">Background 16</option>
+     				<option value="bg-pattern17">Background 17</option>
+     				<option value="bg-pattern18">Background 18</option>
+     				<option value="bg-pattern19">Background 19</option>
+     				<option value="bg-pattern20">Background 20</option>
+     				<option value="bg-pattern21">Background 20</option>
+     				<option value="bg-custom">Custom</option>
+   			</field>
+				<field name="bgcustomtext" type="wstext" label="You can also use a custom Background Image. For this, please upload your JPG File to this Location: &lt;b&gt;joomla/templates/template-name/images/bg/custom.jpg&lt;/b&gt;" showon="boxed:boxed" />
+							
+				<field type="asset" path="templates/avendor/admin/" />
+				
+				
+				
+			</fieldset>
+			
+			<!-- FONTS *************************************************************************************************************************************************************************************************************************** -->
+			
+			<fieldset name="fonts" label="Fonts">
+				
+				<field name="headline3" type="wsheadline" label="&lt;i class='fa fa-font'&gt;&lt;/i&gt;Fonts for Headlines" />
+				<field name="fontstext1" type="wstext" label="Here you can choose the &lt;b&gt;Headline Font&lt;/b&gt; for this Theme, you have the choice between Websafe Fonts and Google Fonts. Please click the Button &lt;b&gt;How to use&lt;/b&gt; for more detailed instructions." />
+				
+				<field
+   				name="headline_font"
+   				type="list"
+   				default="arial,helvetica,sans-serif"
+   				label="Headline Font"
+   				description="Please choose the Main Font for the Headlines"
+   			>
+     				<option value="headline_googlefont">↓ Use Google Font below</option>
+     				<option value="arial, helvetica, sans-serif">Sans-serif - Arial</option>
+     				<option value="Impact, Charcoal, sans-serif">Sans-serif - Impact</option>
+     				<option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Sans-serif - Lucida Sans Unicode</option>
+     				<option value="Tahoma, Geneva, sans-serif">Sans-serif - Tahoma</option>
+     				<option value="Verdana, Geneva, sans-serif">Sans-serif - Verdena</option>
+     				<option value="Georgia, serif">Serif - Georgia</option>
+     				<option value="'Times New Roman', Times, serif">Serif - Times New Roman</option>
+     				<option value="'Courier New', Courier, monospace">Monospace - Courier New</option>		
+   			</field>
+				<field name="googlefont1" type="wsimage" label="How to use" link="../templates/avendor/admin/googlefonts.jpg" showon="headline_font:headline_googlefont" />
+				
+				<field
+					name="headline_googlecode"
+					type="text"
+					default=""
+					label="Google Font Code"
+					filter="raw"
+					class="googlefont"
+					description="Copy here the link to the Google Font if you want to use one"
+					showon="headline_font:headline_googlefont"
+				/>
+				<field name="googlefont2" type="wslink" label="Browse all Fonts" link="http://www.google.com/fonts" showon="headline_font:headline_googlefont" />
+				
+				<field
+					name="headline_googlecss"
+					type="text"
+					default=""
+					label="Google Font CSS"
+					filter="raw"
+					showon="headline_font:headline_googlefont"
+					description="Copy here the CSS from the Google Font if you want to use one. VERY IMPORTANT: if you want full ECWID Support, you have to add '!important' to the end, before the closing ';'"
+				/>
+
+				<field name="headline4" type="wsheadline" label="&lt;i class='fa fa-font'&gt;&lt;/i&gt;Fonts for Body" />
+				<field name="fontstext2" type="wstext" label="Here you can choose the &lt;b&gt;Body Font&lt;/b&gt; for this Theme, you have the choice between Websafe Fonts and Google Fonts. Please click the Button &lt;b&gt;How to use&lt;/b&gt; for more detailed instructions. If you want to use the same Font for the Body like for the Headline please choose the option &lt;b&gt;Use Google Font above&lt;/b&gt;, this prevents double loading of the Font." />
+
+				
+				<field
+   				name="body_font"
+   				type="list"
+   				default="arial,helvetica,sans-serif"
+   				label="Headline Font"
+   				description="Please choose the Main Font for the Body"
+   			>
+   			    <option value="headline_googlefont">↑ Use Google Font above (prevents double loading)</option>
+     				<option value="body_googlefont">↓ Use Google Font below</option>
+     				<option value="arial, helvetica, sans-serif">Sans-serif - Arial</option>
+     				<option value="Impact, Charcoal, sans-serif">Sans-serif - Impact</option>
+     				<option value="'Lucida Sans Unicode', 'Lucida Grande', sans-serif">Sans-serif - Lucida Sans Unicode</option>
+     				<option value="Tahoma, Geneva, sans-serif">Sans-serif - Tahoma</option>
+     				<option value="Verdana, Geneva, sans-serif">Sans-serif - Verdena</option>
+     				<option value="Georgia, serif">Serif - Georgia</option>
+     				<option value="'Times New Roman', Times, serif">Serif - Times New Roman</option>
+     				<option value="'Courier New', Courier, monospace">Monospace - Courier New</option>		
+   			</field>
+   			<field name="googlefont3" type="wsimage" label="How to use" link="../templates/avendor/admin/googlefonts.jpg" showon="body_font:body_googlefont" />
+				
+				<field
+					name="body_googlecode"
+					type="text"
+					default=""
+					label="Google Font Code"
+					filter="raw"
+					class="googlefont"
+					description="Copy here the link to the Google Font if you want to use one"
+					showon="body_font:body_googlefont"
+				/>
+				<field name="googlefont4" type="wslink" label="Browse all Fonts" link="http://www.google.com/fonts" showon="body_font:body_googlefont" />
+				
+				<field
+					name="body_googlecss"
+					type="text"
+					default=""
+					label="Google Font CSS"
+					filter="raw"
+					showon="body_font:body_googlefont"
+					description="Copy here the CSS from the Google Font if you want to use one. VERY IMPORTANT: if you want full ECWID Support, you have to add '!important' to the end, before the closing ';'"
+				/>
+						
+			</fieldset>
+			
+			<!-- LOGO *************************************************************************************************************************************************************************************************************************** -->
+			
+			<fieldset name="header" label="Logo">
+
+				<field name="logoheadline" type="wsheadline" label="&lt;i class='fa fa-gear'&gt;&lt;/i&gt;Settings for the Main Logo" />
+				
+				<field name="wstext_logo" type="wstext" label="Please note: the Logo must be inserted in the Module: 'Bootstrap Mega Menu'! There you can decide to use a Image or plain Text." />
+
+
+			</fieldset>
+			
+			<!-- FOOTER *************************************************************************************************************************************************************************************************************************** -->
+			
+			<fieldset name="footer" label="Footer">
+				
+				<field name="footerset1" type="wsheadline" label="&lt;i class='fa fa-gear'&gt;&lt;/i&gt;Footer Settings" />
+												
+				<field
+					name="copyright_year"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="Display current year"
+					description="Did you want to show the current year in Front of the Copyright?"
+				>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+				</field>
+				
+				<field
+					name="copyright"
+					type="text"
+					default=""
+					label="Text for Footer"
+					description="Here you can insert your Text for the Footer, the current year is in front of it and set automatic! HTML is also allowed in this field"
+					filter="raw"
+				/>
+
+			
+			</fieldset>
+			
+			<!-- FAVICONS *************************************************************************************************************************************************************************************************************************** -->
+			
+			<fieldset name="favicons" label="Favicons">
+				
+				<field name="favheadline" type="wsheadline" label="&lt;i class='fa fa-gear'&gt;&lt;/i&gt;Favicon Options" />
+				<field name="favtext" type="wstext" label="Here you can choose the Favicons for the different Devices when you add a Bookmark for the Site. But please note, the Main Favicon must be changed here:&lt;br /&gt;&lt;br /&gt;&lt;b&gt;joomla/templates/template-name/&lt;/b&gt; - in this folder there is a file called favicon.ico&lt;br /&gt;&lt;br /&gt;Please replace this file with your own. If you have changed it, please clear the cache of your Browser and reopen it, otherwise it will have no effect. If you do not know how to make a favicon we recommend you &lt;a href='http://tools.dynamicdrive.com/favicon' target='_blank'&gt;this Tool for Favicons&lt;/a&gt;." />
+
+				
+				<field
+					name="fav144"
+					type="media"
+					default=""
+					label="Favicon 144px"
+					description="Please add a PNG File with the Dimensions 144x144 Pixels for mobile devices (For third-generation iPad with high-resolution Retina display)"
+				/>
+				
+				<field
+					name="fav114"
+					type="media"
+					default=""
+					label="Favicon 114px"
+					description="Please add a PNG File with the Dimensions 114x114 Pixels for mobile devices (For iPhone with high-resolution Retina display)"
+				/>
+				
+				<field
+					name="fav72"
+					type="media"
+					default=""
+					label="Favicon 72px"
+					description="Please add a PNG File with the Dimensions 72x72 Pixels for mobile devices (For first- and second-generation iPad)"
+				/>
+				
+				<field
+					name="fav57"
+					type="media"
+					default=""
+					label="Favicon 57px"
+					description="Please add a PNG File with the Dimensions 57x57 Pixels for mobile devices (For non-Retina iPhone, iPod Touch, and Android 2.1+ devices)"
+				/>
+				
+				
+			</fieldset>
+			
+						
+			
+			<!-- OFFLINE *************************************************************************************************************************************************************************************************************************** -->
+			
+			<fieldset name="offlinesettings" label="Offline">
+			
+			<field name="offheadline" type="wsheadline" label="&lt;i class='fa fa-gear'&gt;&lt;/i&gt;Offline Options" />
+			<field name="offtext" type="wstext" label="Here you can set some additonal options for the Offline Page (the global options for the Offline can be found in System - Global Configuration) like the Countdown." />
+
+			
+			<field
+					name="offline_countdown"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="Display Countdown"
+					description="Did you want to show the Countdown"
+				>
+						<option value="1">Yes</option>
+						<option value="0">No</option>
+				</field>
+			
+			<field
+					name="offline_countdown_value"
+					type="text"
+					default="May 12, 2015 09:03:25"
+					label="Countdown Time"
+					description="Please set the Time to where the Countdown should run. Format is May 12, 2015 09:03:25"
+					filter="raw"
+					showon="offline_countdown:1"
+				/>
+				
+				<field
+					name="offline_bgimage"
+					type="media"
+					preview="true"
+					default=""
+					label="Background Image"
+					description="Please choose a BIG Background Image for the Offline Page"
+					filter="raw"
+				/>
+			
+
+			
+			</fieldset>
+			
+			
+			
+			
+			<!-- PRELOADER OPTIONS *************************************************************************************************************************************************************************************************************************** -->
+			
+			<fieldset name="preloadersettings" label="Preloader">
+			
+			<field name="preloaderline" type="wsheadline" label="&lt;i class='fa fa-gear'&gt;&lt;/i&gt;Preloader Options" />
+			<field name="preloadertext" type="wstext" label="Here you can set some additonal options for the Preloader which is integrated in this Template! Please keep in mind: to activate them, place a random Module, no matter which one, to the Moduleposition 'preloader' and assign this Module to all Pages where you want to have a Preloading Effect. We choose this way for maximum flexibility." />
+
+			
+			<field
+				name="preloader_bgcolor"
+				type="color"
+				position="bottom"
+				default=""
+				label="Background Color"
+				description="Here you can set the Background Color for the Preloader. Leave this Field blank to use the default one!"
+			/>
+			
+			<field
+				name="preloader_color"
+				type="color"
+				default="#ffffff"
+				label="Line Color"
+				position="bottom"
+				description="Here you can set the Text and Line Color for the Preloader."
+			/>
+
+			<field
+				name="preloader_percent"
+				type="radio"
+				class="btn-group"
+				default="1"
+				label="Percentage Numbers"
+				description="Do you want to display percentage Numbers?"
+			>
+				<option value="1">Yes</option>
+				<option value="0">No</option>
+			</field>
+			
+			<field
+				name="preloader_height"
+				type="int"
+				default="1"
+				label="Bar Height"
+				description="Here you can set the height for the Pleloading Bar"
+				/>
+			
+
+			
+			</fieldset>
+			
+			
+			
+			
+			
+			
+			
+			<!-- CSS *************************************************************************************************************************************************************************************************************************** -->
+			
+			<fieldset name="css-functions" label="CSS">
+				
+				<field name="headline-css" type="wsheadline" label="&lt;i class='fa fa-css3'&gt;&lt;/i&gt;Add your own CSS" />
+				
+				<field name="wsattention_css" type="wstext" label="Please note: this Editor Area is to include your custom CSS Styles directly, no need to add a style Tag or similar. Please do &lt;b&gt;not paste any Analytics Code here!!&lt;/b&gt; As alternative you can also insert your custom CSS in the file &lt;b&gt;custom.css&lt;/b&gt; located under templates/avendor/css/" />
+
+				<field
+					name="addcss"
+					type="editor"
+					default=""
+					label="Code for Head"
+					description="Here you can insert your own CSS Files. Link an external file or simply use the style tag. This Element is inserted in the Head"
+					editor="none"
+					height="300"
+					filter="raw"
+				/>
+
+				
+				<field name="wsfaq_" type="wsfaq" question="Recommend Media Queries (non-mobile-first-method)" answer="&lt;b&gt;Large Devices, Wide Screens&lt;/b&gt;&lt;br /&gt;@media only screen and (max-width : 1200px) { your css here }&lt;br /&gt;&lt;br /&gt;
+				&lt;b&gt;Medium Devices, Desktops&lt;/b&gt;&lt;br /&gt;@media only screen and (max-width : 992px) { your css here }&lt;br /&gt;&lt;br /&gt;
+				&lt;b&gt;Small Devices, Tablets&lt;/b&gt;&lt;br /&gt;@media only screen and (max-width : 768px) { your css here }&lt;br /&gt;&lt;br /&gt;
+				&lt;b&gt;Extra Small Devices, Phones&lt;/b&gt;&lt;br /&gt;@media only screen and (max-width : 480px) { your css here }&lt;br /&gt;&lt;br /&gt;
+				&lt;b&gt;Custom, iPhone Retina&lt;/b&gt;&lt;br /&gt;@media only screen and (max-width : 320px) { your css here }" />
+				
+			</fieldset>
+			
+			
+			<!-- ANALYTICS *************************************************************************************************************************************************************************************************************************** -->
+			
+			<fieldset name="analytics" label="Analytics">
+				
+				<field name="headline-code" type="wsheadline" label="&lt;i class='fa fa-gear'&gt;&lt;/i&gt;Add your own Code here" />
+				<field name="wsattention_ana" type="wstext" label="Please note: this Editor Area is to include your custom Footer Code directly, for example Analytics Code like Piwik or Google Analytics. Please do &lt;b&gt;not paste any CSS Code here!!&lt;/b&gt;" />
+
+				<field
+					name="addcode"
+					type="editor"
+					default=""
+					label="Code for Footer"
+					description="Enter the Analytics Tracking Code. It's inserted before the closing Body Tag"
+					height="300"
+					editor="none"
+					filter="raw"
+					buttons="true"
+				/>
+				
+				
+				
+				
+			
+			</fieldset>
+			
+			<!-- DOCUMENTATION *************************************************************************************************************************************************************************************************************************** -->
+			
+			<fieldset name="documentation" label="Documentation">
+				
+				<field name="documentation-iframe" type="wsdocumentation" url="http://www.ws-theme.com/docs/avendor/index.html" headline="Documentation" text="Here you find the original Documentation of the Template." />
+			
+			</fieldset>
+
+		</fields>
+	</config>
+
+</extension>
